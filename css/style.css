@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.container-top {
+  height: 100px;
+  background-color: #099688;
+}
+.container-bottom {
+  height: calc(100vh - 100px);
+  background-color: #DBDCD3;
+}
+.wrapper {
+  width: calc(100% - 200px );
+  margin: 15px 100px;
+  background-color: lightgrey;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
