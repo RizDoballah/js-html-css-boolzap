@@ -24,7 +24,7 @@ color: black;
   line-height: 30px;
   padding: 0 5px;
 }
-.clearfix {
+.clearfix::after {
   content: '';
   display: table;
   clear: both;
@@ -50,8 +50,8 @@ color: black;
 }
 .wrapper {
   width: calc(100% - 200px );
+  height: 95%;
   margin: 15px 100px;
-  background-color: red;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -62,15 +62,20 @@ color: black;
   background-color: #EBEBEB;
 }
 #contacts .info {
-  height: 30px;
   padding: 10px 5px;
   width: 100%;
   border-right: 1px solid red;
 }
-
-#contacts .profile-info i {
-font-size: 40px;
-line-height: 30px;
+#contacts .profile-info {
+width: 10%;
+}
+#contacts .tab i {
+  font-size: 14px;
+}
+#contacts .profile-info img{
+width: 100%;
+border-radius: 50%;
+vertical-align: middle;
 }
 #contacts .notification {
   padding: 10px 10px;
@@ -78,9 +83,9 @@ line-height: 30px;
   background-color: #8EDAFD;
 }
 #contacts .notification i {
-  padding: 10px;
+  padding: 10px 6px;
   color: #8EDAFD;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #fff;
   border-radius: 50%;
 }
@@ -106,27 +111,73 @@ line-height: 30px;
 #contacts .search .search-bar {
   padding: 4px 40px;
   width: 100%;
-  font-size: 10px;
+  font-size: 11px;
   border: none;
 }
 #contacts .contact-list {
-  padding: 10px 15px;
   margin-right: 10px;
-   min-height: 150px;
+  min-height: 150px;
   overflow-y: auto;
   background-color: #fff;
 }
 #contacts .contact-list .profile {
-  margin-top: 15px;
+  padding: 3px 10px;
+  border-bottom: 1px solid #EBEBEB;
 }
-#contacts .contact-list i {
-  font-size: 40px;
+#contacts .contact-list img {
+  width: 15%;
   vertical-align: middle;
 }
-
-
+/* Messages */
 #messages {
-  width: 70%;
-  height: 100%;
-  background-color: darkgrey;
+width: 70%;
+background-color: #fff;
+}
+#messages .info {
+  padding: 10px 5px;
+  background-color: #EBEBEB;
+}
+#messages .profile-info {
+width: 43%;
+}
+
+#messages .tab i {
+  font-size: 14px;
+}
+#messages .profile-info img{
+width: 10%;
+border-radius: 50%;
+vertical-align: middle;
+}
+#messages .chat-window {
+  height: calc(100vh - 138px);
+  margin-right: 10px;
+  background-color: #E5DDD5;
+}
+#messages .chat-bar {
+  padding: 10px 15px;
+  height: 50px;
+  background-color: #F3EEEA;
+}
+.container-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#messages .chat-bar img {
+  width: 2%;
+  margin-right: 20px;
+}
+#messages .chat-bar .chat  {
+  width: 220%;
+  margin-top: -3px;
+  padding: 12px;
+  font-size: 11px;
+  border: none;
+
+}
+#messages .chat-bar i{
+  font-size: 16px;
+  margin-left: 60px;
 }
