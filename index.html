@@ -8,27 +8,102 @@
     <title>Boolzp</title>
   </head>
   <body>
+    <!-- Container -->
     <div class="container">
       <div class="container-top"></div>
       <div class="container-bottom"></div>
-      <div class="wrapper">
-        <section id="contacts">
-          <div class="info"></div>
-          <div class="notification"></div>
-          <div class="search"></div>
-          <div class="contact-list"></div>
-
+      <!-- Wrapper -->
+      <div class="wrapper clearfix">
+        <!-- Contacts -->
+        <section class="float-left" id="contacts">
+          <div class="info clearfix">
+            <div class="profile-info float-left">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="tab float-right">
+              <ul class="list-inline">
+                <li><a href="#"><i class="fas fa-circle-notch"></i></a></li>
+                <li><a href="#"><i class="far fa-comment-alt"></i></a></li>
+                <li><a href="#"><i class="fas fa-ellipsis-v"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="notification">
+            <i class="fas fa-bell-slash"></i>
+            <div class="text">
+              <p>Ricevi notifiche di nuovi messagi</p>
+              <a href="#">attiva notifiche desktop</a>
+            </div>
+          </div>
+          <div class="search">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <input class="search-bar" type="text" placeholder="Cerca o inizia una nuova chat" name="search">
+          </div>
+          <div class="contact-list">
+            <div class="profile">
+              <i class="fas fa-user-circle"></i>
+              <div class="text">
+                <h3>Michele</h3>
+                <p>Non poteva essere altrimenti</p>
+            </div>
+            <div class="profile">
+              <i class="fas fa-user-circle"></i>
+              <div class="text">
+                <h3>Fabio</h3>
+                <p>Non poteva essere altrimenti</p>
+            </div>
+            <div class="profile">
+              <i class="fas fa-user-circle"></i>
+              <div class="text">
+                <h3>Samuele</h3>
+                <p>Non poteva essere altrimenti</p>
+            </div>
+            <div class="profile">
+              <i class="fas fa-user-circle"></i>
+              <div class="text">
+                <h3>Alessandro</h3>
+                <p>Non poteva essere altrimenti</p>
+            </div>
+            <div class="profile">
+              <i class="fas fa-user-circle"></i>
+              <div class="text">
+                <h3>Claudia</h3>
+                <p>Non poteva essere altrimenti</p>
+            </div>
+            <div class="profile">
+              <i class="fas fa-user-circle"></i>
+              <div class="text">
+                <h3>Davide</h3>
+                <p>Non poteva essere altrimenti</p>
+            </div>
+            <div class="profile">
+              <i class="fas fa-user-circle"></i>
+              <div class="text">
+                <h3>Silvia</h3>
+                <p>Non poteva essere altrimenti</p>
+            </div>
+            <div class="profile">
+              <i class="fas fa-user-circle"></i>
+              <div class="text">
+                <h3>Michele</h3>
+                <p>Non poteva essere altrimenti</p>
+            </div>
+          </div>
         </section>
-        <section id="message">
+        <!-- /Contacts -->
+        <!-- Messages -->
+        <section class="float-right" id="messages">
+
           <div class="info-bar"></div>
           <div class="chat-window"></div>
           <div class="chat-bar"></div>
 
         </section>
-
-
+        <!-- /Messages -->
       </div>
+      <!-- /Wrapper -->
     </div>
+    <!-- /Container -->
   <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>

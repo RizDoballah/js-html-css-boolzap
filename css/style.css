@@ -5,7 +5,35 @@
 }
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 12px;
+}
+a {
+  text-decoration: none;
+  color: grey;
+}
+a:hover,
+a:focus,
+a:active {
+color: black;
+}
+.list-inline {
+  list-style: none;
+}
+.list-inline li {
+  display: inline-block;
+  line-height: 30px;
+  padding: 0 5px;
+}
+.clearfix {
+  content: '';
+  display: table;
+  clear: both;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
 }
 .container {
   position: relative;
@@ -23,8 +51,82 @@ body {
 .wrapper {
   width: calc(100% - 200px );
   margin: 15px 100px;
-  background-color: lightgrey;
+  background-color: red;
   position: absolute;
   top: 0;
   bottom: 0;
+}
+#contacts {
+  width: 30%;
+  height: 100%;
+  background-color: #EBEBEB;
+}
+#contacts .info {
+  height: 30px;
+  padding: 10px 5px;
+  width: 100%;
+  border-right: 1px solid red;
+}
+
+#contacts .profile-info i {
+font-size: 40px;
+line-height: 30px;
+}
+#contacts .notification {
+  padding: 10px 10px;
+  height: 60px;
+  background-color: #8EDAFD;
+}
+#contacts .notification i {
+  padding: 10px;
+  color: #8EDAFD;
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.text {
+  display: inline-block;
+  margin-left: 10px;
+  line-height: 16px;
+  vertical-align: middle;
+}
+#contacts .notification .text a {
+  text-decoration: underline;
+}
+#contacts .search {
+  position: relative;
+  padding: 5px;
+  height: 30px;
+}
+#contacts .search a i {
+  position: absolute;
+  top: 9px;
+  left: 15px;
+}
+#contacts .search .search-bar {
+  padding: 4px 40px;
+  width: 100%;
+  font-size: 10px;
+  border: none;
+}
+#contacts .contact-list {
+  padding: 10px 15px;
+  margin-right: 10px;
+   min-height: 150px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+#contacts .contact-list .profile {
+  margin-top: 15px;
+}
+#contacts .contact-list i {
+  font-size: 40px;
+  vertical-align: middle;
+}
+
+
+#messages {
+  width: 70%;
+  height: 100%;
+  background-color: darkgrey;
 }
