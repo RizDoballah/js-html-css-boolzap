@@ -8,7 +8,9 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
 }
-p {
+p,
+span,
+small {
   color: #BEC0C2;
 }
 a {
@@ -68,13 +70,13 @@ a:active {
 #contacts .info {
   padding: 10px 5px;
   width: 100%;
-  border-right: 1px solid red;
+  border-right: 1px solid darkgrey;
 }
 #contacts .profile-info {
   width: 10%;
 }
 #contacts .tab i {
-  font-size: 14px;
+  font-size: 15px;
 }
 #contacts .profile-info img{
   width: 100%;
@@ -95,6 +97,15 @@ a:active {
 }
 #contacts .notification p {
   color: black;
+}
+h3 {
+  display: inline;
+  font-weight: normal;
+}
+span {
+  float: right;
+  margin-right: -100px;
+  font-size: 11px;
 }
 .text {
   display: inline-block;
@@ -122,9 +133,9 @@ a:active {
   border: none;
 }
 #contacts .contact-list {
-  margin-right: 10px;
-  height: 400px;
-  overflow-y: auto;
+
+  height: calc(100% - 160px);
+  overflow-y: scroll;
   background-color: #fff;
 }
 #contacts .contact-list .profile {
@@ -143,9 +154,9 @@ a:active {
 }
 /* Messages */
 #messages {
-width: 70%;
-height: 100%;
-background-color: #fff;
+  width: 70%;
+  height: 100%;
+  background-color: #fff;
 }
 #messages .info {
   padding: 9px 5px;
@@ -164,10 +175,41 @@ background-color: #fff;
   vertical-align: middle;
 }
 #messages .chat-window {
+  display: none;
   height: calc(100% - 100px);
-  margin-right: 10px;
   background-color: #E5DDD5;
-  overflow-y: auto;
+  overflow-y: scroll;
+}
+#messages .messages {
+  min-width: 30%;
+  max-width: 60%;
+  padding: 5px;
+  margin: 10px;
+  border-radius:5px;
+}
+#messages .chat-window.active {
+  display: block;
+}
+#messages .message {
+  display: flex;
+  justify-content: space-between;
+}
+#messages .message p {
+  color: black;
+}
+#messages .message-time {
+text-align: right;
+}
+#messages .messages.sent {
+  float: right;
+  clear: both;
+  background-color: #D6FABB;
+}
+
+#messages .messages.received {
+  float: left;
+  clear: both;
+  background: white;
 }
 #messages .chat-bar {
   padding: 10px 15px;
@@ -176,24 +218,24 @@ background-color: #fff;
 }
 .container-flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
 #messages .chat-bar img {
   width: 2%;
-  margin-right: 20px;
   cursor: pointer;
 }
-#messages .chat-bar .chat  {
-
-  margin-top: -3px;
+#chat-box {
+  margin: 5px 10px;
   padding: 12px;
+  width: 90%;
   font-size: 11px;
-  border: none;
-
 }
 #messages .chat-bar i{
   font-size: 16px;
-  margin-left: 60px;
+  margin-right: 10px;
+}
+.template {
+  display: none;
 }
