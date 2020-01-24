@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Boolzp</title>
   </head>
   <body>
@@ -122,13 +123,10 @@
           <div class="chat-window">
 
           </div>
-          <div class="chat-bar">
-            <div class="container-flex">
-              <img src="img/imoji.png" alt="imoji icona">
-              <input class="chat" type="text" name="" value="" placeholder="Scrivi un messagio">
-              <a href="#"><i class="fas fa-paper-plane"></i></a>
-
-            </div>
+          <div class="chat-bar container-flex">
+            <img src="img/imoji.png" alt="imoji icona">
+            <input id="chat-box" type="text" name="" value="" placeholder="Scrivi un messagio">
+            <a id="send" href="#"><i class="fas fa-paper-plane"></i></a>
           </div>
 
         </section>

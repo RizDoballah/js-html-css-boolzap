@@ -4,8 +4,12 @@
   box-sizing: border-box;
 }
 body {
+  min-width: 1200px;
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
+}
+p {
+  color: #BEC0C2;
 }
 a {
   text-decoration: none;
@@ -14,7 +18,7 @@ a {
 a:hover,
 a:focus,
 a:active {
-color: black;
+  color: black;
 }
 .list-inline {
   list-style: none;
@@ -45,11 +49,11 @@ color: black;
   background-color: #099688;
 }
 .container-bottom {
-  height: calc(100vh - 100px);
+  height: calc(100% - 100px);
   background-color: #DBDCD3;
 }
 .wrapper {
-  width: calc(100% - 200px );
+  width: calc(100% - 200px);
   height: 95%;
   margin: 15px 100px;
   position: absolute;
@@ -67,15 +71,15 @@ color: black;
   border-right: 1px solid red;
 }
 #contacts .profile-info {
-width: 10%;
+  width: 10%;
 }
 #contacts .tab i {
   font-size: 14px;
 }
 #contacts .profile-info img{
-width: 100%;
-border-radius: 50%;
-vertical-align: middle;
+  width: 100%;
+  border-radius: 50%;
+  vertical-align: middle;
 }
 #contacts .notification {
   padding: 10px 10px;
@@ -88,6 +92,9 @@ vertical-align: middle;
   font-size: 18px;
   background-color: #fff;
   border-radius: 50%;
+}
+#contacts .notification p {
+  color: black;
 }
 .text {
   display: inline-block;
@@ -116,13 +123,19 @@ vertical-align: middle;
 }
 #contacts .contact-list {
   margin-right: 10px;
-  min-height: 150px;
+  height: 400px;
   overflow-y: auto;
   background-color: #fff;
 }
 #contacts .contact-list .profile {
   padding: 3px 10px;
   border-bottom: 1px solid #EBEBEB;
+  cursor: pointer;
+}
+#contacts .contact-list .profile:hover,
+#contacts .contact-list .profile:focus,
+#contacts .contact-list .profile:active {
+  background-color: #DBDCD5;
 }
 #contacts .contact-list img {
   width: 15%;
@@ -131,28 +144,30 @@ vertical-align: middle;
 /* Messages */
 #messages {
 width: 70%;
+height: 100%;
 background-color: #fff;
 }
 #messages .info {
-  padding: 10px 5px;
+  padding: 9px 5px;
   background-color: #EBEBEB;
 }
 #messages .profile-info {
-width: 43%;
+  width: 43%;
 }
 
 #messages .tab i {
   font-size: 14px;
 }
 #messages .profile-info img{
-width: 10%;
-border-radius: 50%;
-vertical-align: middle;
+  width: 10%;
+  border-radius: 50%;
+  vertical-align: middle;
 }
 #messages .chat-window {
-  height: calc(100vh - 138px);
+  height: calc(100% - 100px);
   margin-right: 10px;
   background-color: #E5DDD5;
+  overflow-y: auto;
 }
 #messages .chat-bar {
   padding: 10px 15px;
@@ -168,9 +183,10 @@ vertical-align: middle;
 #messages .chat-bar img {
   width: 2%;
   margin-right: 20px;
+  cursor: pointer;
 }
 #messages .chat-bar .chat  {
-  width: 220%;
+
   margin-top: -3px;
   padding: 12px;
   font-size: 11px;
