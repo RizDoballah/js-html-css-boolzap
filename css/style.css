@@ -121,7 +121,7 @@ span {
   padding: 5px;
   height: 30px;
 }
-#contacts .search a i {
+#contacts .search .search-contact {
   position: absolute;
   top: 9px;
   left: 15px;
@@ -132,26 +132,39 @@ span {
   font-size: 11px;
   border: none;
 }
-#contacts .contact-list {
-
-  height: calc(100% - 160px);
+.contacts {
+  height: calc(100% - 145px);
   overflow-y: scroll;
   background-color: #fff;
 }
-#contacts .contact-list .profile {
-  padding: 3px 10px;
+.contact-list {
+  list-style: none;
+}
+.contact-element {
+  display: flex;
+  align-items: center;
+  padding: 5px;
   border-bottom: 1px solid #EBEBEB;
   cursor: pointer;
 }
-#contacts .contact-list .profile:hover,
-#contacts .contact-list .profile:focus,
-#contacts .contact-list .profile:active {
+.contact-element img {
+  margin-right: 10px;
+  width: 15%;
+}
+.contact-element .contact-info {
+  width: 90%;
+}
+.contact-info-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-element:hover,
+.contact-element:focus,
+.contact-element:active {
   background-color: #DBDCD5;
 }
-#contacts .contact-list img {
-  width: 15%;
-  vertical-align: middle;
-}
+
 /* Messages */
 #messages {
   width: 70%;
