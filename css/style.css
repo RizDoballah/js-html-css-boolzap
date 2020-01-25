@@ -1,12 +1,8 @@
+/* Utilties */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-body {
-  min-width: 1200px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
 }
 p,
 span,
@@ -41,18 +37,18 @@ a:active {
 .float-right {
   float: right;
 }
-.container {
+.template {
+  display: none;
+}
+body {
   position: relative;
   width: 100%;
   height: 100vh;
-}
-.container-top {
-  height: 100px;
-  background-color: #099688;
-}
-.container-bottom {
-  height: calc(100% - 100px);
-  background-color: #DBDCD3;
+  min-width: 1200px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  position: relative;
+  background-image: linear-gradient(#099688 20%, #DBDCD3 20%, #DBDCD3);
 }
 .wrapper {
   width: calc(100% - 200px);
@@ -62,71 +58,61 @@ a:active {
   top: 0;
   bottom: 0;
 }
+/* Contacts */
 #contacts {
   width: 30%;
   height: 100%;
   background-color: #EBEBEB;
 }
-#contacts .info {
+.info {
   padding: 10px 5px;
   width: 100%;
   border-right: 1px solid darkgrey;
 }
-#contacts .profile-info {
+.profile-info {
   width: 10%;
 }
-#contacts .tab i {
+.tab i {
   font-size: 15px;
 }
-#contacts .profile-info img{
+.profile-info img{
   width: 100%;
   border-radius: 50%;
   vertical-align: middle;
 }
-#contacts .notification {
+.notification {
+  display: flex;
+  align-items: center;
   padding: 10px 10px;
   height: 60px;
   background-color: #8EDAFD;
 }
-#contacts .notification i {
+.notification i {
   padding: 10px 6px;
+  margin-right: 10px;
   color: #8EDAFD;
   font-size: 18px;
   background-color: #fff;
   border-radius: 50%;
 }
-#contacts .notification p {
+.notification p {
+  margin-bottom: 2px;
   color: black;
 }
-h3 {
-  display: inline;
-  font-weight: normal;
-}
-span {
-  float: right;
-  margin-right: -80px;
-  font-size: 11px;
-}
-.text {
-  display: inline-block;
-  margin-left: 10px;
-  line-height: 16px;
-  vertical-align: middle;
-}
-#contacts .notification .text a {
+.notification .text a {
   text-decoration: underline;
 }
-#contacts .search {
+.search {
   position: relative;
   padding: 5px;
   height: 30px;
 }
-#contacts .search .search-contact {
+.search .search-contact {
   position: absolute;
   top: 9px;
   left: 15px;
 }
-#contacts .search .search-bar {
+.search .search-bar {
   padding: 4px 40px;
   width: 100%;
   font-size: 11px;
@@ -171,60 +157,57 @@ span {
   height: 100%;
   background-color: #fff;
 }
-#messages .info {
-  padding: 9px 5px;
+.info-messages {
+  padding: 10px 5px;
   background-color: #EBEBEB;
 }
-#messages .profile-info {
-  width: 43%;
+.profile-messages {
+  display: flex;
+  align-items: center;
 }
-
-#messages .tab i {
-  font-size: 14px;
-}
-#messages .profile-info img{
-  width: 10%;
+.profile-messages img{
+  width: 9%;
+  margin-right: 10px;
   border-radius: 50%;
   vertical-align: middle;
 }
-#messages .chat-window {
+.chat-window {
   display: none;
-  height: calc(100% - 100px);
+  height: calc(100% - 104px);
   background-color: #E5DDD5;
   overflow-y: scroll;
 }
-#messages .messages {
+.messages {
   min-width: 30%;
   max-width: 60%;
   padding: 5px;
   margin: 10px;
   border-radius:5px;
 }
-#messages .chat-window.active {
+.chat-window.active {
   display: block;
 }
-#messages .message {
+.message {
   display: flex;
   justify-content: space-between;
 }
-#messages .message p {
+.message p {
   color: black;
 }
-#messages .message-time {
-text-align: right;
+.message-time {
+  text-align: right;
 }
-#messages .messages.sent {
+.messages.sent {
   float: right;
   clear: both;
   background-color: #D6FABB;
 }
-
-#messages .messages.received {
+.messages.received {
   float: left;
   clear: both;
   background: white;
 }
-#messages .chat-bar {
+.chat-bar {
   padding: 10px 15px;
   height: 50px;
   background-color: #F3EEEA;
@@ -234,8 +217,7 @@ text-align: right;
   justify-content: space-around;
   align-items: center;
 }
-
-#messages .chat-bar img {
+.chat-bar img {
   width: 2%;
   cursor: pointer;
 }
@@ -245,10 +227,7 @@ text-align: right;
   width: 90%;
   font-size: 11px;
 }
-#messages .chat-bar i{
+.chat-bar i{
   font-size: 16px;
   margin-right: 10px;
-}
-.template {
-  display: none;
 }

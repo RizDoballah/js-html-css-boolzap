@@ -14,7 +14,7 @@ $(document).ready(
     );
     $('.search .search-bar').keydown(
       function(){
-        var text = $('.search .search-bar').val().toLowerCase();
+        var text = $(this).val().toLowerCase();
         searchContacts(text);
       }
     );
@@ -51,7 +51,7 @@ function searchContacts(string) {
     $('.contact-element').hide();
     for (var i = 0; i < $('.contact-element').length; i++) {
       var name = $('.contact-element').eq(i).find('.contact-name').text().toLowerCase();
-      console.log(name);
+
 
       if (name.includes(string)) {
         $('.contact-element').eq(i).show();
@@ -60,6 +60,7 @@ function searchContacts(string) {
     }
 
   }
+
 
 
 

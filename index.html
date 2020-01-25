@@ -9,14 +9,11 @@
     <title>Boolzp</title>
   </head>
   <body>
-    <!-- Container -->
-    <div class="container">
-      <div class="container-top"></div>
-      <div class="container-bottom"></div>
       <!-- Wrapper -->
       <div class="wrapper clearfix">
         <!-- Contacts -->
         <section class="float-left" id="contacts">
+          <!-- Contacts-info -->
           <div class="info clearfix">
             <div class="profile-info float-left">
               <img src="img/profileinfo.jpg" alt="">
@@ -29,6 +26,8 @@
               </ul>
             </div>
           </div>
+          <!-- /Contacts-info -->
+          <!-- Contacts-notification -->
           <div class="notification">
             <i class="fas fa-bell-slash"></i>
             <div class="text">
@@ -36,11 +35,13 @@
               <a href="#">attiva notifiche desktop</a>
             </div>
           </div>
+          <!-- /Contacts-notification -->
+          <!-- Contacts-search -->
           <div class="search">
-            <i class="fas fa-search search-contact">
-            </i>
+            <i class="fas fa-search search-contact"></i>
             <input class="search-bar" type="text" placeholder="Cerca o inizia una nuova chat" name="search">
           </div>
+          <!-- /Contacts-search -->
           <!-- Contact-list -->
           <div class="contacts">
             <ul class="contact-list">
@@ -96,7 +97,7 @@
                 <img src="img/profile5.jpg" alt="Sandra">
                 <div class="contact-info">
                   <div class="contact-info-top">
-                    <h3 class="contact-name">Sandra</h3>
+                    <h3 class="contact-name">Simona</h3>
                     <small class="contact-time">17.53</small>
                   </div>
                   <div class="contact-info-bottom">
@@ -141,22 +142,22 @@
                 </div>
               </li>
             </ul>
-
-
-
-      </div>
-      <!-- /Contact-list -->
+          </div>
+        <!-- /Contact-list -->
 
         </section>
         <!-- /Contacts -->
         <!-- Messages -->
         <section class="float-right" id="messages">
-          <div class="info clearfix">
-            <div class="profile-info float-left">
-              <img src="img/profileinfo.jpg" alt="profile">
-              <div class="text">
-                <h3>Michele</h3>
-                <p>Ultimo accesso oggi alle ore 15:40</p>
+          <!-- Messages-info -->
+          <div class="info-messages clearfix">
+            <div class="profile-info-messages float-left">
+              <div class="profile-messages">
+                <img src="img/profileinfo.jpg" alt="profile">
+                <div class="text-messages">
+                  <h3>Michele</h3>
+                  <p>Ultimo accesso oggi alle ore 15:40</p>
+                </div>
               </div>
             </div>
             <div class="tab float-right">
@@ -166,8 +167,9 @@
                 <li><a href="#"><i class="fas fa-ellipsis-v"></i></a></li>
               </ul>
             </div>
-
           </div>
+          <!-- /Messages-info -->
+          <!-- Messages-chat-window -->
           <div class="chat-window active" data-contact="0">
             <div class="messages sent">
               <div class="message">
@@ -226,18 +228,20 @@
               </div>
             </div>
           </div>
+          <!-- /Messages-chat-window -->
+          <!-- Messages-chat-bar -->
           <div class="chat-bar container-flex">
             <img src="img/imoji.png" alt="imoji icona">
-            <input id="chat-box" type="text" name="" value="" placeholder="Scrivi un messagio">
-            <i id="send" class="fas fa-paper-plane"></i></a>
+            <input id="chat-box" type="text" name="chat-box" value="" placeholder="Scrivi un messagio">
+            <i id="send" class="fas fa-paper-plane"></i>
           </div>
-
+          <!-- Messages-chat-bar -->
         </section>
         <!-- /Messages -->
       </div>
       <!-- /Wrapper -->
-    </div>
-    <!-- /Container -->
+
+      <!-- Template -->
     <div class="template">
       <div class="chat-window">
         <div class="messages">
@@ -251,6 +255,7 @@
         </div>
       </div>
       </div>
+      <!-- Template -->
   <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
