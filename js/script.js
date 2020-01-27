@@ -20,16 +20,17 @@ $(document).ready(
         searchContacts(text);
       }
     );
-    $('.template .message').click(
-      function() {
-        $('.template .message').find('.dropdown').toggleClass('active');
-      }
-    );
-    $('#cancel').click(
-    function() {
-    $('.message').remove();
-     }
-    );
+
+    $(document).on('click', '.template .message', function () {
+      $('.template .message').find('.dropdown').toggleClass('active');
+      $('#cancel').click(
+        function() {
+          $('.message').remove();
+        }
+      );
+    });
+
+
   }
 );
 
