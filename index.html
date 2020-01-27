@@ -233,7 +233,8 @@
           <div class="chat-bar container-flex">
             <img src="img/imoji.png" alt="imoji icona">
             <input id="chat-box" type="text" name="chat-box" value="" placeholder="Scrivi un messagio">
-            <i id="send" class="fas fa-paper-plane"></i>
+            <i id="send" class="fas fa-paper-plane display-none"></i>
+            <i class="fas fa-microphone"></i>
           </div>
           <!-- Messages-chat-bar -->
         </section>
@@ -242,12 +243,16 @@
       <!-- /Wrapper -->
 
       <!-- Template -->
-    <div class="template">
+    <div class="template diplay-none ">
       <div class="chat-window">
         <div class="messages">
           <div class="message">
             <p class="message-text"></p>
             <i class="fa fa-chevron-down f-right message-options"></i>
+            <ul class="dropdown display-none">
+              <li><a href="#">Info Messagio</a> </li>
+              <li><a href="#">Cancella Messagio</a>
+            </ul>
           </div>
           <div class="message-time">
             <small></small>

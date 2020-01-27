@@ -3,20 +3,32 @@ $(document).ready(
     $('#send').click(
       function() {
       sendMessage();
+      scrollMessage();
       }
     );
     $('#chat-box').keypress(
       function(event) {
         if (event.which == 13) {
           sendMessage();
+          scrollMessage();
         }
       }
     );
-    $('.search .search-bar').keydown(
+    $('.search .search-bar').keyup(
       function(){
         var text = $(this).val().toLowerCase();
         searchContacts(text);
       }
+    );
+    $('.template .message').click(
+      function() {
+        $('.template .message').find('.dropdown').toggleClass('active');
+      }
+    );
+    $('#cancel').click(
+    function() {
+    $('.message').remove();
+     }
     );
   }
 );
@@ -24,7 +36,8 @@ $(document).ready(
 
 
 
-// Functions
+// ------------------Funzioni----------------------//
+//Funzione per inviare un messagio e ricevere una risposta dopo 1 secondo
 function sendMessage() {
   var message = $('#chat-box').val();
   if (message.length != 0) {
@@ -36,34 +49,35 @@ function sendMessage() {
     var time = hours + ':' + minutes;
     newMessage.find('.message-time').text(time);
     newMessage.addClass('sent');
-    $('.chat-window').append(newMessage);
+    $('.chat-window.active').append(newMessage);
     $('#chat-box').val('');
-    var response = 'ok';
     var newResponse = $('.template .messages').clone();
-    newResponse.find('.message-text').text(response);
+    newResponse.find('.message-text').text('ok');
     newResponse.find('.message-time').text(time);
     newResponse.addClass('received');
-    setTimeout(function(){ $('.chat-window').append(newResponse); }, 1000);
+    setTimeout(function(){ $('.chat-window.active').append(newResponse); }, 1000);
   }
 }
-// Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
+
+//Funzione che scrolla
+function scrollMessage() {
+  var heightContainer = $('.chat-window.active').height();
+  $('.chat-window.active').scrollTop(heightContainer);
+}
+
+// Funzione per cercare tra i contatti
 function searchContacts(string) {
-    $('.contact-element').hide();
     for (var i = 0; i < $('.contact-element').length; i++) {
       var name = $('.contact-element').eq(i).find('.contact-name').text().toLowerCase();
-
-
       if (name.includes(string)) {
         $('.contact-element').eq(i).show();
+      } else {
+        $('.contact-element').eq(i).hide();
       }
-
     }
-
   }
 
-
-
-
+//Funzione per aggiungere lo zero davanti ai numeri minori di 10
 function addZero(number) {
   if(number < 10) {
     number = '0' + number;
