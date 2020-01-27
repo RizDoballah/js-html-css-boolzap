@@ -21,13 +21,11 @@ $(document).ready(
       }
     );
 
-    $(document).on('click', '.template .message', function () {
-      $('.template .message').find('.dropdown').toggleClass('active');
-      $('#cancel').click(
-        function() {
-          $('.message').remove();
-        }
-      );
+    $(document).on('click', '.message .message-options', function () {
+      $(this).next('.dropdown').toggleClass('active');
+    });
+    $(document).on('click', '#cancel', function () {
+      $(this).parent().parent().parent().parent().remove();
     });
 
 
