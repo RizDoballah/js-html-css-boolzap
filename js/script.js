@@ -14,6 +14,7 @@ $(document).ready(
         }
       }
     );
+
     $('.search .search-bar').keyup(
       function(){
         var text = $(this).val().toLowerCase();
@@ -25,12 +26,27 @@ $(document).ready(
       $(this).next('.dropdown').toggleClass('active');
     });
     $(document).on('click', '#cancel', function () {
-      $(this).parent().parent().parent().parent().remove();
+      $(this).parents('.messages').remove();
+    });
+    $(document).on('click', '.contact-element', function() {
+      var data = $(this).attr('data-contact');
+      var selector = 'chat-window[data-contact = "'+ data +'"]';
+      $('chat-window').removeClass('active');
+      $(selector).addClass('active');
+      $(this).addClass('active');
+      $('contact-element').removeClass('active');
+      var name =$(this).find('.contact-name').text();
+      var time = $(this).find('.contact-time').text();
+      var img = $(this).find('img').attr('src');
+      $('.chat-window img').attr('src', img);
+      $('.chat-window .contact-name').text(name);
+      $('.chat-window .contact-time').text(time);
     });
 
+  });
 
-  }
-);
+
+
 
 
 
@@ -61,7 +77,7 @@ function sendMessage() {
 //Funzione che scrolla
 function scrollMessage() {
   var heightContainer = $('.chat-window.active').height();
-  $('.chat-window.active').scrollTop(heightContainer);
+  $('.container-chat-window').scrollTop(heightContainer);
 }
 
 // Funzione per cercare tra i contatti

@@ -171,11 +171,15 @@ body {
   border-radius: 50%;
   vertical-align: middle;
 }
+.container-chat-window {
+  height: calc(100% - 104px);
+  overflow-y: scroll;
+
+}
 .chat-window {
   display: none;
-  height: calc(100% - 104px);
+  min-height: 100%; 
   background-color: #E5DDD5;
-  overflow-y: scroll;
 }
 .messages {
   min-width: 20%;
