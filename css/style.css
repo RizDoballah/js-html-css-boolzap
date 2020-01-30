@@ -40,6 +40,15 @@ a:active {
 .display-none {
   display: none;
 }
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden
+}
+.avatar img {
+  width: 100%;
+}
 body {
   position: relative;
   width: 100%;
@@ -65,19 +74,12 @@ body {
   background-color: #EBEBEB;
 }
 .info {
-  padding: 10px 5px;
+  padding: 5px;
   width: 100%;
   border-right: 1px solid darkgrey;
 }
-.profile-info {
-  width: 10%;
-}
 .tab i {
   font-size: 15px;
-}
-.profile-info img{
-  width: 100%;
-  border-radius: 50%;
   vertical-align: middle;
 }
 .notification {
@@ -129,16 +131,13 @@ body {
 .contact-element {
   display: flex;
   align-items: center;
-  padding: 5px;
+  padding: 6px;
   border-bottom: 1px solid #EBEBEB;
   cursor: pointer;
 }
-.contact-element img {
-  margin-right: 10px;
-  width: 15%;
-}
-.contact-element .contact-info {
-  width: 90%;
+.contact-info {
+  width: 100%;
+  margin-left: 10px;
 }
 .contact-info-top {
   display: flex;
@@ -158,28 +157,24 @@ body {
   background-color: #fff;
 }
 .info-messages {
-  padding: 10px 5px;
+  padding: 5px;
   background-color: #EBEBEB;
 }
 .profile-messages {
   display: flex;
   align-items: center;
 }
-.profile-messages img{
-  width: 9%;
-  margin-right: 10px;
-  border-radius: 50%;
-  vertical-align: middle;
+.text-messages {
+  margin-left: 10px;
 }
 .container-chat-window {
   height: calc(100% - 104px);
   overflow-y: scroll;
-
+  background-color: #E5DDD5;
 }
 .chat-window {
   display: none;
-  min-height: 100%; 
-  background-color: #E5DDD5;
+  min-height: 100%;
 }
 .messages {
   min-width: 20%;

@@ -30,17 +30,17 @@ $(document).ready(
     });
     $(document).on('click', '.contact-element', function() {
       var data = $(this).attr('data-contact');
-      var selector = 'chat-window[data-contact = "'+ data +'"]';
-      $('chat-window').removeClass('active');
+      var selector = '.chat-window[data-contact = "'+ data +'"]';
+      $('.chat-window').removeClass('active');
       $(selector).addClass('active');
       $(this).addClass('active');
-      $('contact-element').removeClass('active');
+      $('.contact-element').removeClass('active');
       var name =$(this).find('.contact-name').text();
       var time = $(this).find('.contact-time').text();
       var img = $(this).find('img').attr('src');
-      $('.chat-window img').attr('src', img);
-      $('.chat-window .contact-name').text(name);
-      $('.chat-window .contact-time').text(time);
+      $('.info-messages img').attr('src', img);
+      $('.info-messages .text-messages > h3').text(name);
+      $('.info-messages .text-messages > p ').text(time);
     });
 
   });
